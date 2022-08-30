@@ -7,12 +7,12 @@ std::string StringConverter::toCamelCase(std::string snakeString)
 	for (auto it = snakeString.begin(); it != snakeString.end(); ++it)
 	{
 
-		if (it != snakeString.begin() && findFloor(*(it - 1)))
+		if (it != snakeString.begin() && isFloor(*(it - 1)))
 		{
 			char letter = changeToBig(*it);
 			camelString.push_back(letter);
 		}
-		else if (!findFloor(*it))
+		else if (!isFloor(*it))
 		{
 			camelString.push_back(*it);
 		}
@@ -39,22 +39,22 @@ std::string StringConverter::toSnakeCase(std::string camelString)
 	return snakeString;
 }
 
-bool StringConverter::isBiggerLetter(char c)
+bool StringConverter::isBiggerLetter(char& c)
 {
 	return (c >= 65 && c <= 90);
 }
 
-char StringConverter::changeToSmall(char c)
+char StringConverter::changeToSmall(char& c)
 {
 	return std::tolower(c);
 }
 
-char StringConverter::changeToBig(char c)
+char StringConverter::changeToBig(char& c)
 {
 	return std::toupper(c);
 }
 
-bool StringConverter::findFloor(char c)
+bool StringConverter::isFloor(char& c)
 {
 	return c == 95;
 }
