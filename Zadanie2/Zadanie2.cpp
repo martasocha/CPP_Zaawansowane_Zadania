@@ -15,16 +15,11 @@ int findCommonLetters(std::string str1, std::string str2)
         {
             if (*it == *it2)
             {
-                auto search = set.find(* it2);
-                if (search == set.end())
-                {
-                    set.insert(*it2);
-                    countCommonLetters++;
-                }
+                set.insert(*it2);
             }
         }
     }
-    return countCommonLetters;
+    return set.size();
 }
 
 int main()
