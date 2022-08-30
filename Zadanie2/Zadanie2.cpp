@@ -3,9 +3,11 @@
 
 #include <iostream>
 #include <string>
+#include <set>
 
 int findCommonLetters(std::string str1, std::string str2)
 {
+    std::set<char> set;
     int countCommonLetters = 0;
     for (auto it = str1.begin(); it != str1.end(); ++it)
     {
@@ -13,7 +15,12 @@ int findCommonLetters(std::string str1, std::string str2)
         {
             if (*it == *it2)
             {
-                countCommonLetters++;
+                auto search = set.find(* it2);
+                if (search == set.end())
+                {
+                    set.insert(*it2);
+                    countCommonLetters++;
+                }
             }
         }
     }
@@ -22,8 +29,8 @@ int findCommonLetters(std::string str1, std::string str2)
 
 int main()
 {
-    std::string str1 = "abcdefg";
-    std::string str2 = "egf";
+    std::string str1 = "kasia";
+    std::string str2 = "tasiaaaassk";
     std::cout << findCommonLetters(str1, str2);
 }
 
