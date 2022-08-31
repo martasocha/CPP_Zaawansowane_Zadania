@@ -8,6 +8,9 @@ int main()
 {
     std::string text = "HEJ";
     MorseCodeTranslator translator;
-    std::cout << translator.toMorseCode(text);
+    std::cout << translator.toMorseCode(text) << std::endl;
+
+    std::string morseCode = "-.. -.-. -... ";
+    std::cout << translator.fromMorseCode(morseCode);
 }
 
