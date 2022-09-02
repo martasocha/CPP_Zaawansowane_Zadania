@@ -1,4 +1,4 @@
-#include <iostream>
+
 #include <vector>
 #include <random>
 
@@ -24,6 +24,7 @@ std::vector<int> addLists(std::vector<int> list1, std::vector<int> list2)
     std::vector<int> newList;
     std::copy(list1.begin(), list1.end(), std::back_inserter(newList));
     std::copy(list2.begin(), list2.end(), std::back_inserter(newList));
+
     return newList;
 }
 

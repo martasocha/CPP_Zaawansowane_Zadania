@@ -16,7 +16,9 @@ std::string reverseString(std::string str)
 
 int main()
 {
+    int number;
     std::string str = "Hello World!";
+    number = 3;
     std::cout << reverseString(str);
 }
 
