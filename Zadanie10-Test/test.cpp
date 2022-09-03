@@ -4,7 +4,14 @@
 
 TEST(TestBigInt, AddBigInt) 
 {
-	BigInt bInt1(1111111111111111111);
-	BigInt bInt2(2222222222222222222);
-	//EXPECT_EQ(bInt1+bInt2,3333333333333333333);
+	BigInt bInt1(2);
+	BigInt bInt2(4);
+	EXPECT_EQ(bInt1+bInt2,6);
+}
+
+TEST(TestBigInt, AddBigInt2)
+{
+	BigInt bInt1(222);
+	BigInt bInt2(444);
+	EXPECT_EQ(bInt1 + bInt2, 666);
 }

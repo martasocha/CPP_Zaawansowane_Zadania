@@ -3,8 +3,8 @@
 
 int main()
 {
-	BigInt bInt1(4);
-	BigInt bInt2(2);
-	BigInt bInt3 = bInt1 + bInt2;
+	BigInt bInt1(22);
+	BigInt bInt2(5);
+	BigInt bInt3 = bInt1 * bInt2;
 }
 
