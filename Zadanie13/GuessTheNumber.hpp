@@ -4,9 +4,10 @@
 class GuessTheNumber
 {
 public:
+	enum class Result { WIEKSZE, MNIEJSZE, ROWNE };
 	GuessTheNumber();
 	int generateNumber();
-	bool guessNumber(int number);
+	enum class Result guessNumber(int number);
 	int getSecretNumber();
 private:
 	int _secretNumber;

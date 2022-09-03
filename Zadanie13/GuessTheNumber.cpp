@@ -17,24 +17,43 @@ int GuessTheNumber::generateNumber()
     return number;
 }
 
-bool GuessTheNumber::guessNumber(int number)
+GuessTheNumber::Result GuessTheNumber::guessNumber(int number)
 {
     if (number == _secretNumber)
     {
-        std::cout << "Gratulacje zgadles/as!" << std::endl;
-        return true;
+        return Result::ROWNE;
     }
     else if (number < _secretNumber)
     {
-        std::cout << "Liczba jest wieksza od podanej" << std::endl;
-        return false;
+        return Result::WIEKSZE;
     }
     else
     {
-        std::cout << "Liczba jest mniejsza od podanej" << std::endl;
-        return false;
+        return Result::MNIEJSZE;
     }
 }
+
+//enum class Result GuessTheNumber::guessNumber(int number)
+//{
+//    if (number == _secretNumber)
+//    {
+//        return Result::ROWNE;
+//        //std::cout << "Gratulacje zgadles/as!" << std::endl;
+//        return true;
+//    }
+//    else if (number < _secretNumber)
+//    {
+//        Result::WIEKSZE;
+//        //std::cout << "Liczba jest wieksza od podanej" << std::endl;
+//        return false;
+//    }
+//    else
+//    {
+//        Result::MNIEJSZE;
+//        //std::cout << "Liczba jest mniejsza od podanej" << std::endl;
+//        return false;
+//    }
+//}
 
 int GuessTheNumber::getSecretNumber()
 {
