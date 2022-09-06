@@ -33,28 +33,6 @@ GuessTheNumber::Result GuessTheNumber::guessNumber(int number)
     }
 }
 
-//enum class Result GuessTheNumber::guessNumber(int number)
-//{
-//    if (number == _secretNumber)
-//    {
-//        return Result::ROWNE;
-//        //std::cout << "Gratulacje zgadles/as!" << std::endl;
-//        return true;
-//    }
-//    else if (number < _secretNumber)
-//    {
-//        Result::WIEKSZE;
-//        //std::cout << "Liczba jest wieksza od podanej" << std::endl;
-//        return false;
-//    }
-//    else
-//    {
-//        Result::MNIEJSZE;
-//        //std::cout << "Liczba jest mniejsza od podanej" << std::endl;
-//        return false;
-//    }
-//}
-
 int GuessTheNumber::getSecretNumber()
 {
     return _secretNumber;

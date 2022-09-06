@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{5bb97b11-9242-4210-8e72-5de94b9e9e4d}</ProjectGuid>
-    <RootNamespace>Zadanie14</RootNamespace>
+    <ProjectGuid>{311e733c-f555-4b4f-a7e4-2e819ecc2c20}</ProjectGuid>
+    <RootNamespace>Brudnopis</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,11 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ChangeMoney.cpp" />
-    <ClCompile Include="Zadanie14.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="ChangeMoney.hpp" />
+    <ClCompile Include="Brudnopis.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,7 +6,6 @@
 
 int main()
 {
-	//RectangleGenerator generator(0, 50);
 	RectangleManager manager(100);
 	manager.printRectangles();
 
