@@ -1,11 +1,10 @@
 #pragma once
-#include <string>
 #include <fstream>
+#include <vector>
+#include "Employee.hpp"
 
 class EmployeejSONReader {
 public:
+    std::vector<Employee> readValue();
 
-    std::string readValue();
-private:
-    std::fstream _filestream;
 };

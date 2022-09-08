@@ -21,6 +21,15 @@
     <ClCompile Include="Employee.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="EmployeeCSVReader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EmployeeCSVWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Employee.hpp">
@@ -29,13 +38,16 @@
     <ClInclude Include="EmployeeManager.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EmployeeReader.hpp">
+    <ClInclude Include="IEmployeeReader.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="EmployeeCSVReader.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EmployeejSONReader.hpp">
+    <ClInclude Include="IEmployeeWriter.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EmployeeCSVWriter.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

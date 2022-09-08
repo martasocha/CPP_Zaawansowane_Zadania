@@ -3,9 +3,32 @@
 #include <iostream>
 #include "EmployeeManager.hpp"
 
-std::vector<Employee> EmployeeCSVReader::readEmployees()
+double stringToDouble(std::string str)
 {
-    std::ifstream file("employee_input.csv");
+    double value = std::stod(str);
+    return value;
+}
+
+Employee::Gender stringToGender(std::string str)
+{
+    if (str == "FEMALE")
+    {
+        return Employee::Gender::FEMALE;
+    }
+    else if (str == "MALE")
+    {
+        return Employee::Gender::MALE;
+    }
+    else
+    {
+        return Employee::Gender::UNKNOWN;
+    }
+
+}
+
+std::vector<Employee> EmployeeCSVReader::readEmployees(std::string filePath)
+{
+    std::ifstream file(filePath);
 
     if (!file.is_open())
     {
@@ -17,8 +40,8 @@ std::vector<Employee> EmployeeCSVReader::readEmployees()
     std::string name;
     std::string lastName;
     std::string mail;
-    Employee::Gender gender;
-    double salary;
+    std::string gender;
+    std::string salary;
 
     std::string str;
 
@@ -28,10 +51,11 @@ std::vector<Employee> EmployeeCSVReader::readEmployees()
     {
         std::getline(file, lastName);
         std::getline(file, mail);
-        //std::getline(file, gender);
-        //std::getline(file, salary);
-
-        employees.emplace_back(name, lastName, mail);
+        std::getline(file, gender);
+        Employee::Gender gender1 = stringToGender(gender);
+        std::getline(file, salary);
+        double salary1 = stringToDouble(salary);
+        employees.emplace_back(name, lastName, mail, gender1, salary1);
     }
     file.close();
  

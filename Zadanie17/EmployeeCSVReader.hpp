@@ -1,10 +1,17 @@
 #pragma once
-#include <string>
 #include <fstream>
+#include <vector>
+#include "Employee.hpp"
+#include "IEmployeeReader.hpp"
 
-class EmployeeCSVReader {
+#include <vector>
+
+class EmployeeCSVReader : public IEmployeeReader
+{
 public:
-    std::string readValue();
+	std::vector<Employee> readEmployees(std::string filePath) override; //wewnatrz tej funkcji mozemy sobie tez od razu tymczasowo utworzyc wszystkie zmienne do oblsugi plikow
+
+
 private:
-    std::fstream _filestream;
+	//pola potrzbene do obslugi plików
 };

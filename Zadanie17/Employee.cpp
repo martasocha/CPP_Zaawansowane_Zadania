@@ -1,5 +1,10 @@
 #include "Employee.hpp"
 
+Employee::Employee(std::string name, std::string lastName, std::string mail, Employee::Gender gender, double salary)
+    : _name(name), _lastName(lastName), _mail(mail), _gender(gender), _salary(salary)
+{
+}
+
 std::string Employee::getName()
 {
     return _name;
@@ -7,15 +12,15 @@ std::string Employee::getName()
 
 std::string Employee::getSurname()
 {
-    return _surname;
+    return _lastName;
 }
 
-int Employee::getEmail()
+std::string Employee::getEmail()
 {
-    return _email;
+    return _mail;
 }
 
-Gender Employee::getGender()
+Employee::Gender Employee::getGender()
 {
     return _gender;
 }
