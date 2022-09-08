@@ -35,6 +35,11 @@ std::string Employee::getLogin()
     return _login;
 }
 
+void Employee::setLogin(std::string login)
+{
+    _login = login;
+}
+
 std::string Employee::getPassword()
 {
     return _password;

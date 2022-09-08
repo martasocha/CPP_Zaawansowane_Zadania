@@ -13,6 +13,7 @@ public:
 	Employee::Gender getGender();
 	double getSalary();
 	std::string getLogin();
+	void setLogin(std::string login);
 	std::string getPassword();
 private:
 	std::string _name;

@@ -9,5 +9,5 @@ int main()
     //EmployeeManager empManager2(std::make_shared<EmployeeJSONReader>(), std::make_shared<EmployeeJSONWriter>());
     empManager.readDataFromFile("employee_input.csv");
 
-    //empManager.generateLogin();
+    empManager.generateLogin();
 }
