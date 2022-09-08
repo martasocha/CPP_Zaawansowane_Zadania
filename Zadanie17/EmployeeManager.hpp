@@ -12,7 +12,7 @@ public:
 	EmployeeManager(std::shared_ptr<IEmployeeReader> fileReader, std::shared_ptr<IEmployeeWriter> fileWriter);
 
 	void readDataFromFile(std::string filePath);
-	std::string generateLogin();
+	//std::vector<std::string> generateLogin();
 	//std::string generatePasswords();
 	//b) storeLoginDataToFile
 	//c) int calculateFirstNameStarting(char firstLetter)

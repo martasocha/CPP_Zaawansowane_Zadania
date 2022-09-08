@@ -9,13 +9,13 @@ double stringToDouble(std::string str)
     return value;
 }
 
-Employee::Gender stringToGender(std::string str)
+Employee::Gender stringToGender(std::string gender)
 {
-    if (str == "FEMALE")
+    if (gender == "FEMALE" || gender == "Female")
     {
         return Employee::Gender::FEMALE;
     }
-    else if (str == "MALE")
+    else if (gender == "MALE" || gender == "Male")
     {
         return Employee::Gender::MALE;
     }
@@ -49,9 +49,9 @@ std::vector<Employee> EmployeeCSVReader::readEmployees(std::string filePath)
 
     while (std::getline(file, name, ','))
     {
-        std::getline(file, lastName);
-        std::getline(file, mail);
-        std::getline(file, gender);
+        std::getline(file, lastName, ',');
+        std::getline(file, mail, ',');
+        std::getline(file, gender, ',');
         Employee::Gender gender1 = stringToGender(gender);
         std::getline(file, salary);
         double salary1 = stringToDouble(salary);

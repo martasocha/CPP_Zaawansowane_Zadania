@@ -1,4 +1,43 @@
 
+std::vector<std::string> EmployeeManager::generateLogin()
+{
+    std::vector<std::string> vectOfLogins;
+    auto genLogin = [&](Employee& e)
+    {
+        std::string login;
+        for (int i = 0; i < 2; ++i)
+        {
+            login += e.getSurname().at(i);
+        }
+        for (int i = 0; i < 2; ++i)
+        {
+            login += e.getName().at(i);
+        }
+
+        auto result = std::find(vectOfLogins.begin(), vectOfLogins.end(), e.getLogin());
+        int i = 4;
+        while (result == std::end(vectOfLogins));
+        {
+            for (i; i < i + 2; ++i)
+            {
+                login += e.getName().at(i);
+            }
+            auto result = std::find(vectOfLogins.begin(), vectOfLogins.end(), e.getLogin());
+            i = i + 2;
+        }
+
+        vectOfLogins.push_back(login);
+        //e.getLogin().push_back(login);
+    };
+    std::for_each(_employees.begin(), _employees.end(), genLogin);
+
+    return vectOfLogins;
+}
+
+
+
+
+
 //std::string EmployeeManager::generateLogin()
 //{
 //    auto genLogin = [&](Employee& e)
