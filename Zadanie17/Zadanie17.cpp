@@ -10,4 +10,6 @@ int main()
     empManager.readDataFromFile("employee_input.csv");
 
     empManager.generateLogin();
+    empManager.generatePasswords();
+    empManager.writeDataToFile("plik.csv", IEmployeeWriter::Type::A);
 }

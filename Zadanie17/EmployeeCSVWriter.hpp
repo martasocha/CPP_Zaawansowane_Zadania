@@ -6,5 +6,5 @@
 class EmployeeCSVWriter : public IEmployeeWriter
 {
 public: 
-	void writeEmployees(std::vector<Employee> employees, std::string filePath);
+	void writeEmployees(std::vector<Employee> employees, std::string filePath, Type type);
 };

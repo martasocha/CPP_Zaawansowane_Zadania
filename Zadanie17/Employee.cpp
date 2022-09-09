@@ -44,3 +44,8 @@ std::string Employee::getPassword()
 {
     return _password;
 }
+
+void Employee::setPassword(std::string password)
+{
+    _password = password;
+}

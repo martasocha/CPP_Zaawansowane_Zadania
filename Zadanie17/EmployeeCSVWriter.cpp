@@ -3,9 +3,9 @@
 #include <algorithm>
 #include <iostream>
 
-void EmployeeCSVWriter::writeEmployees(std::vector<Employee> employees, std::string filePath)
+void EmployeeCSVWriter::writeEmployees(std::vector<Employee> employees, std::string filePath, Type type)
 {
-	std::fstream file(filePath);
+	std::fstream file(filePath, std::ios::out);
 
 	if (file.is_open())
 	{
@@ -13,7 +13,14 @@ void EmployeeCSVWriter::writeEmployees(std::vector<Employee> employees, std::str
 		{
 			if (file.good())
 			{
-				file << employees[i].getName() << " ," << employees[i].getSurname() << " ," << employees[i].getEmail() << " ," << employees[i].getSalary() << "\n";
+				if (type == Type::A)
+				{
+					file << employees[i].getLogin() << ", " << employees[i].getEmail() << ", " << employees[i].getPassword() << "\n";
+				}
+				else if (type == Type::B)
+				{
+					file << employees[i].getName() << ", " << employees[i].getSurname() << ", " << employees[i].getSalary() << "\n";
+				}
 			}
 		}
 		file.close();

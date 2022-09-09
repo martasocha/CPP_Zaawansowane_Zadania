@@ -11,11 +11,11 @@ double stringToDouble(std::string str)
 
 Employee::Gender stringToGender(std::string gender)
 {
-    if (gender == "FEMALE" || gender == "Female")
+    if (gender == "Female")
     {
         return Employee::Gender::FEMALE;
     }
-    else if (gender == "MALE" || gender == "Male")
+    else if (gender == "Male")
     {
         return Employee::Gender::MALE;
     }

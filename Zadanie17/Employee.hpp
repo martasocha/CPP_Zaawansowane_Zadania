@@ -15,6 +15,7 @@ public:
 	std::string getLogin();
 	void setLogin(std::string login);
 	std::string getPassword();
+	void setPassword(std::string password);
 private:
 	std::string _name;
 	std::string _lastName;
