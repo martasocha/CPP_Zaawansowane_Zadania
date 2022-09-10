@@ -7,15 +7,18 @@ class Employee
 public:
 	enum class Gender { MALE, FEMALE, UNKNOWN };
 	Employee(std::string name, std::string lastName, std::string mail, Employee::Gender gender, double salary);
-	std::string getName();
-	std::string getSurname();
-	std::string getEmail();
-	Employee::Gender getGender();
-	double getSalary();
-	std::string getLogin();
+	Employee();
+	std::string getName() const;
+	std::string getSurname() const;
+	std::string getEmail() const;
+	Employee::Gender getGender() const;
+	double getSalary() const;
+	std::string getLogin() const;
 	void setLogin(std::string login);
-	std::string getPassword();
+	std::string getPassword() const;
 	void setPassword(std::string password);
+
+	static std::string toString(Gender g);
 private:
 	std::string _name;
 	std::string _lastName;

@@ -1,0 +1,54 @@
+{
+    "SalaryData": [
+        {
+            "_lastName": "Pachta",
+            "_name": "Ruthanne",
+            "salary": 99.95
+        },
+        {
+            "_lastName": "Holtham",
+            "_name": "Annmaria",
+            "salary": 99.89
+        },
+        {
+            "_lastName": "Rojel",
+            "_name": "Nancee",
+            "salary": 99.77
+        },
+        {
+            "_lastName": "O'Brogane",
+            "_name": "Ardelis",
+            "salary": 99.68
+        },
+        {
+            "_lastName": "Phillott",
+            "_name": "Rob",
+            "salary": 99.66
+        },
+        {
+            "_lastName": "Chark",
+            "_name": "Price",
+            "salary": 99.63
+        },
+        {
+            "_lastName": "Hartegan",
+            "_name": "Darlene",
+            "salary": 99.49
+        },
+        {
+            "_lastName": "Stembridge",
+            "_name": "Simon",
+            "salary": 99.44
+        },
+        {
+            "_lastName": "Finey",
+            "_name": "Nonah",
+            "salary": 99.41
+        },
+        {
+            "_lastName": "Govinlock",
+            "_name": "Dulsea",
+            "salary": 99.41
+        }
+    ]
+}

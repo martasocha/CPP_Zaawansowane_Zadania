@@ -3,9 +3,9 @@
 #include "IEmployeeReader.hpp"
 #include "iEmployeeWriter.hpp"
 #include <vector>
-#include <map>
-#include<iostream>
+#include <iostream>
 #include "EmployeeCSVWriter.hpp"
+#include <map>
 
 class EmployeeManager
 {
@@ -19,17 +19,21 @@ public:
 	void generatePasswords();
 	int generate(int num1, int num2);
 	char generate(std::string);
-	//b) storeLoginDataToFile
-	//c) int calculateFirstNameStarting(char firstLetter)
-	//c) std::map calculateUniqueNames()
-	//c) calculateAvarageSalary()
-	//c) calculateAvarageSalaryMen()
-	//c) calculateAvarageSalaryWomen()
-	
-	//std::vector<Employee> calculateTop10Salary();
 
-	//std::vector<E> calculateTop10Salary()
-	//d) storeEmployeeSalary(std::vector<E>)
+	void saveLogins(std::string filePath);
+	void saveSalaries(std::vector<Employee> vect, std::string filePath);
+
+	void printMap(std::map<char, int> map);
+	int countUniqueNames(std::map<std::string, int> map);
+	std::string findFrequentName(std::map<std::string, int> map);
+	void firstLetterNameStats();
+	void calculateUniqueNames();
+	void calculateAvarageSalary();
+	void calculateAvarageSalaryMen();
+	void calculateAvarageSalaryWomen();
+	
+	std::vector<Employee> calculateLeast10Salary();
+	std::vector<Employee> calculateTop10Salary();
 
 private:
 	std::vector<Employee> _employees;

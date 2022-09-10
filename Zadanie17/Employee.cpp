@@ -5,32 +5,36 @@ Employee::Employee(std::string name, std::string lastName, std::string mail, Emp
 {
 }
 
-std::string Employee::getName()
+Employee::Employee()
+{
+}
+
+std::string Employee::getName() const
 {
     return _name;
 }
 
-std::string Employee::getSurname()
+std::string Employee::getSurname() const
 {
     return _lastName;
 }
 
-std::string Employee::getEmail()
+std::string Employee::getEmail() const
 {
     return _mail;
 }
 
-Employee::Gender Employee::getGender()
+Employee::Gender Employee::getGender() const
 {
     return _gender;
 }
 
-double Employee::getSalary()
+double Employee::getSalary() const
 {
     return _salary;
 }
 
-std::string Employee::getLogin()
+std::string Employee::getLogin() const
 {
     return _login;
 }
@@ -40,7 +44,7 @@ void Employee::setLogin(std::string login)
     _login = login;
 }
 
-std::string Employee::getPassword()
+std::string Employee::getPassword() const
 {
     return _password;
 }
@@ -48,4 +52,23 @@ std::string Employee::getPassword()
 void Employee::setPassword(std::string password)
 {
     _password = password;
+}
+
+std::string Employee::toString(Gender g)
+{
+    switch (g)
+    {
+    case Gender::FEMALE:
+            return "Female";
+            break;
+
+    case Gender::MALE:
+        return "Male";
+        break;
+
+    case Gender::UNKNOWN:
+        return "Unknown";
+        break;
+
+    }
 }

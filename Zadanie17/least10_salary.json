@@ -1,0 +1,59 @@
+{
+    "SalaryData": [
+        {
+            "_lastName": "Chesnut",
+            "_name": "Koenraad",
+            "salary": 1.05
+        },
+        {
+            "_lastName": "Hamments",
+            "_name": "Pepita",
+            "salary": 1.08
+        },
+        {
+            "_lastName": "Puckett",
+            "_name": "Denice",
+            "salary": 1.35
+        },
+        {
+            "_lastName": "Streat",
+            "_name": "Tamera",
+            "salary": 1.4
+        },
+        {
+            "_lastName": "Reignolds",
+            "_name": "Ashton",
+            "salary": 1.43
+        },
+        {
+            "_lastName": "Goodbar",
+            "_name": "Joella",
+            "salary": 1.58
+        },
+        {
+            "_lastName": "Littefair",
+            "_name": "Norman",
+            "salary": 1.67
+        },
+        {
+            "_lastName": "Arrowsmith",
+            "_name": "Kory",
+            "salary": 1.68
+        },
+        {
+            "_lastName": "Dace",
+            "_name": "Blondell",
+            "salary": 1.75
+        },
+        {
+            "_lastName": "Panyer",
+            "_name": "Adlai",
+            "salary": 2.05
+        },
+        {
+            "_lastName": "Odby",
+            "_name": "Nicolis",
+            "salary": 2.07
+        }
+    ]
+}

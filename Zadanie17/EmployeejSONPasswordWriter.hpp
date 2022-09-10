@@ -3,11 +3,9 @@
 #include "Employee.hpp"
 #include "IEmployeeWriter.hpp"
 
-class EmployeejSONWriter : public IEmployeeWriter
+class EmployeejSONPasswordWriter : public IEmployeeWriter
 {
 public:
 	void writeEmployees(std::vector<Employee> employees, std::string filePath, Type type);
-	void writeLogin(std::vector<Employee> employees, std::string filePath);
-	void writeSalary(std::vector<Employee> employees, std::string filePath);
 	//void writeEmployeesLoginsPasswords(std::vector<Employee> employees, std::string filePath);
 };

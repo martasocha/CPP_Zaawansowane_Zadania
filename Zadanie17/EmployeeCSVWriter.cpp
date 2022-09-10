@@ -32,3 +32,43 @@ void EmployeeCSVWriter::writeEmployees(std::vector<Employee> employees, std::str
 
 
 }
+
+void EmployeeCSVWriter::writeLogin(std::vector<Employee> employees, std::string filePath)
+{
+	std::fstream file(filePath, std::ios::out);
+
+	file << "login, email, password";
+
+	if (file.is_open())
+	{
+		for (const auto& empl : employees)
+		{
+			if (file.good())
+			{
+				file << empl.getLogin() << ", " << empl.getEmail() << ", " << empl.getPassword() << "\n";
+			}
+		}
+	}
+	else
+	{
+		std::cout << "Nie moge otworzyc pliku do zapisu";
+	}
+	file.close();
+
+}
+
+void EmployeeCSVWriter::writeSalary(std::vector<Employee> employees, std::string filePath)
+{
+	std::ofstream o(filePath);
+
+	o << "first name, last name, salary";
+
+	if (o.is_open())
+	{
+		for (const auto& empl : employees)
+		{
+			o << empl.getName() << ", " << empl.getSurname() << ", " << empl.getSalary();
+		}
+	}
+	o.close();
+}
